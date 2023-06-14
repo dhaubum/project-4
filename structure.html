@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Roboto, sans-serif;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .typing-text {
+      overflow: hidden;
+      white-space: pre-wrap;
+      margin: 0;
+      padding: 0;
+      font-size: 15px;
+      font-weight: 150;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="typing-text">
+  	<br>
+├── https://github.com/dhaubum
+    <br>
+│     ├── project-1
+    <br>
+│     ├── project-2
+    <br>
+│     ├── project-3
+    <br>
+│     ├── project-4
+    <br>
+│     │     ├── structure.html
+    <br>
+│     ├── project-5
+  </h1>
+
+  <script>
+    const typingText = document.querySelector('.typing-text');
+    const text = typingText.textContent;
+    typingText.textContent = '';
+
+    let index = 0;
+    function type() {
+      typingText.textContent += text[index];
+      index++;
+      if (index < text.length) {
+        setTimeout(type, 100);
+      }
+    }
+
+    type();
+  </script>
+</body>
+</html>
